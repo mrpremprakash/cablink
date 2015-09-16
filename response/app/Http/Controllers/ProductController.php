@@ -16,7 +16,10 @@ class ProductController extends Controller {
      * @return Response
      */
     public function index() {
-        return view('pages.products.product-list');
+        $categories = Product::select('product_id', 'category_id', 'title', 'description', 'original_price', 'is_available', 'star')
+                    ->get()->keyBy('product_id');
+                return response()->json($categories);
+        //return view('pages.products.product-list');
     }
 
     /**

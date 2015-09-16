@@ -1,7 +1,7 @@
 (function() {
     angular.module('cablink').service('categoryService', function($http, $q, $location) {
         var categories = [];
-        var resourceUrl = '../php/public/categories';
+        var resourceUrl = '../response/public/categories';
         return {
             updateCategories: updateCategories,
             addCategory: addCategory,
@@ -36,7 +36,7 @@
             if(typeof id != 'undefined') {
                 return categories[id];
             }
-            
+            //console.log(resourceUrl);
             return $http.get(resourceUrl + '?action=get_categories')
             .then(function(response) {
                 if(typeof response.data == 'object') {

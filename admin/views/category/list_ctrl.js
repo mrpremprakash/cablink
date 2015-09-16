@@ -14,7 +14,7 @@
                 controller: 'ModalInstanceCtrl',                
                 resolve: {
                     data: function () {
-                        return {event: event, id};
+                        return {event: event, id: id};
                     }
                 }
             });

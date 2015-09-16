@@ -4,7 +4,7 @@
         $scope.saveProduct = function() {
             itemService.addItem($scope.formData).then(function(data) {                
                     $scope.items = itemService.getItems();
-                //$location.path('/');
+                $location.path('/products');
             }, function() {});
             
         };

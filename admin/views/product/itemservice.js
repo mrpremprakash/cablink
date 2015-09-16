@@ -1,7 +1,8 @@
 (function() {
     angular.module('cablink').service('itemService', function($http, $q, $location) {
         var items = [];
-        var resourceUrl = '../php/public/products/';
+
+        var resourceUrl = '../response/public/products';
         return {
             getItems: getItems,
             addItem: addItem,
@@ -15,7 +16,7 @@
         function addItem(item) {
             return $http({
                 method: 'post',
-                url: resourceUrl + 'new',
+                url: resourceUrl + '/new',
                 data: item
             }).then(function(response) {                
                 return response;
@@ -23,13 +24,14 @@
                 
             });
         }
-        function fetchItems() {            
-            return $http.get('php/ajax.php?action=get_items')
+        function fetchItems() {
+
+            return $http.get(resourceUrl)
             .then(function(response){
                 if (typeof response.data === 'object') {
-                    items = response.data;                
+                    items = response.data;
                     return response.data;
-                } else {                    
+                } else {
                     return $q.reject(response.data);
                 }
             }, function(response){
