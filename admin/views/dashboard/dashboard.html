@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+
+        
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-themesecondary">
+                        <i class="widget-icon fa fa-tags themesecondary"></i>
+                        <span class="widget-caption themesecondary">Dashboard</span>
+                    </div><!--Widget Header-->
+                    <div class="widget-body  no-padding">
+                        <div class="tickets-container">
+                            <div class="row" ng-controller="NavigationController">
+                                
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" ng-repeat="menu in menues">
+                                    <div class="databox bg-white radius-bordered">
+                                        <div class="databox-left" style="background-color: {{ menu.color }}">
+                                            <div class="databox-piechart">
+                                                <div data-toggle="easypiechart" class="easyPieChart" data-barcolor="#fff" data-linecap="butt" data-percent="50" data-animate="500" data-linewidth="3" data-size="47" data-trackcolor="rgba(255,255,255,0.1)" style="width: 47px; height: 47px; line-height: 47px;"><span class="white font-90">50%</span><canvas width="47" height="47"></canvas></div>
+                                            </div>
+                                        </div>
+                                        <div class="databox-right" ng-click="go(menu.link)">
+                                            <span class="databox-number themesecondary">28</span>
+                                            <div class="databox-text darkgray">{{ menu.name }}</div>
+                                            <div class="databox-stat themesecondary radius-bordered">
+                                                <i class="stat-icon icon-lg fa fa-tasks"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  

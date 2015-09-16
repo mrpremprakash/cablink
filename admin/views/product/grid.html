@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">                            
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-themesecondary">
+                        <i class="widget-icon fa fa-tags themesecondary"></i>
+                        <span class="widget-caption themesecondary">Items</span>
+                    </div><!--Widget Header-->
+                    <div class="widget-body  no-padding">
+                        <div class="tickets-container" ng-controller="ItemListController">
+                            
+                            <div class="row" ng-controller="ItemListController">
+                                <div class="col-sm-6 col-md-3" ng-repeat="item in items | filter:title">
+                                    <div class="thumbnail">
+                                        <img src="../resources/images/img1.jpg" alt="Testing cable">
+                                    </div>
+                                    <div class="caption">
+                                        <h3>{{ item.title }}</h3>
+                                        <p>{{ item.description }}</p>
+                                        <p>
+                                            <a href="#" class="btn btn-primary" role="button">
+                                            Button
+                                            </a> 
+                                            <a href="#" class="btn btn-default" role="button">
+                                            Button
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>				
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

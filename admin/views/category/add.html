@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">                            
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-themesecondary">
+                        <i class="widget-icon fa fa-tags themesecondary"></i>
+                        <span class="widget-caption themesecondary">Add Category</span>
+                        <span class="widget-caption themesecondary pull-right" style="margin-right: 25px">
+                            <a href="#/categories">Back</a>
+                        </span>
+                    </div><!--Widget Header-->
+                    <div class="widget-body  no-padding">
+                        <div class="tickets-container">
+                            
+                            <form class="form-horizontal" ng-submit="saveCategory()">
+                                <div class="well well-sm">
+                                        <strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong>
+                                    </div>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="control-label col-xs-2">Parent Category</label>
+                                    <div class="col-xs-10" ng-controller="ListCategories">
+                                        <select id="company" class="form-control" ng-model="formData.parent_id">
+                                                <option value=""> -- Select --</option>
+                                                <option ng-repeat="category in categories" value="{{ category.category_id }}">
+                                                    {{ category.title }}
+                                                </option>
+                                            </select> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword" class="control-label col-xs-2">Name</label>
+                                    <div class="col-xs-10">
+                                        <input type="text" class="form-control" 
+                                                   name="title" ng-model="formData.title" placeholder="Name" novalidate>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword" class="control-label col-xs-2">Status</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" ng-model="formData.status">
+                                                <option value="1" selected="selected"> Active </option>
+                                                <option value="0"> Pending </option>                                                
+                                            </select> 
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-offset-2 col-xs-12">
+                                        <input type="submit" name="submit" id="submit" value="Add" class="btn btn-info pull-right">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

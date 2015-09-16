@@ -1,0 +1,13 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+.widget {
+    box-shadow: none;
+    padding: 0px;
+    margin: 0px 0px 30px;
+}

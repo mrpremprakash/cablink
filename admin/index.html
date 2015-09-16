@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>.:Dashboard:.</title>
+		<!-- Bootstrap core CSS -->
+		<link href="../resources/css/bootstrap.css" rel="stylesheet" />
+		<!-- Custom styles for this template -->
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+		<link href="../resources/fonts-awesome/css/font-awesome.min.css" rel="stylesheet">
+        
+        
+		
+		<script src="../resources/js/angular.min.js"></script>
+		<script src="../resources/js/angular-route.min.js"></script>
+        <script src="../resources/js/ui-bootstrap-tpls-0.13.4.min.js"></script>
+        
+		<script src="js/app.js"></script>
+		<script src="js/directive.js"></script>
+		
+        
+		<script src="js/menuservice.js"></script>
+		<script src="js/NavigationController.js"></script>
+        
+        <!-- Category specific files starts-->
+        <script src="views/category/categoryservice.js"></script>
+        <script src="views/category/add_ctrl.js"></script>
+        <script src="views/category/edit_ctrl.js"></script>
+        <script src="views/category/list_ctrl.js"></script>
+        <script src="views/category/modal_ctrl.js"></script>        
+        <!-- Category specific files ends-->
+        
+        <!-- Product specific files starts -->
+		<script src="views/product/toggle_view_dir.js"></script>
+		<script src="views/product/itemservice.js"></script>
+		<script src="views/product/add_ctrl.js"></script>
+		<script src="views/product/list_ctrl.js"></script>
+		<script src="views/product/itemcontroller.js"></script>
+        <!-- Product specific files ends -->
+		
+        
+	</head>
+	<body ng-app="cablink">
+		<div class="container">
+			<!-- Static navbar -->
+			<nav class="navbar navbar-default"  style="margin-bottom:30px">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Project name</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse" ng-controller="NavigationController">
+						<ul class="nav navbar-nav">
+                            <li ng-repeat="menu in menues" style="background-color: {{ menu.color }}">
+                                <a href="#/{{ menu.link }}">{{ menu.name }}</a>
+                            </li>
+							
+						</ul>
+					</div>
+					<!--/.nav-collapse -->
+				</div>
+				<!--/.container-fluid -->
+			</nav>
+            
+            
+			<!-- Main section to display items list -->
+            <div ng-view></div>
+            
+		</div>
+		<!-- /container -->
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+        
+        
+        <!-- Bootstrap modal window starts-->
+        <script type="text/ng-template" id="myModalContent.html">
+            <div class="modal-header">
+                <h3 class="modal-title">Delete Confirmation</h3>
+            </div>
+            <div class="modal-body">Are you sure you want to delete this item?</div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+                <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+            </div>
+        </script>
+    
+        <!--div ng-show="selected">Selection from a modal: {{ selected }}</div-->
+        <!-- Bootstrap modal window ends-->
+        
+	</body>
+</html>

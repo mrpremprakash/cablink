@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<!--[if IE]>
+<![endif]-->
+<!--[if IE 8 ]>
+<html dir="ltr" lang="en" class="ie8">
+    <![endif]-->
+    <!--[if IE 9 ]>
+    <html dir="ltr" lang="en" class="ie9">
+        <![endif]-->
+        <!--[if (gt IE 9)|!(IE)]>
+        <!-->
+        <html dir="ltr" class="ltr" lang="en">
+            <!--
+            <![endif]-->
+            <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>Pav Floral Store - Responsive Opencart Theme</title>
+                <base href="resources/" />
+                <meta name="description" content="Pav Floral Store - Responsive Opencart Theme" />
+                <meta name="keywords" content="Pav Floral Store" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <link href="http://demopavothemes.com/pav_floral/image/catalog/cart.png" rel="icon" />
+                <link href="css/bootstrap.css" rel="stylesheet" />
+                <link href="css/stylesheet.css" rel="stylesheet" />
+                <link href="css/font-awesome.min.css" rel="stylesheet" />
+                <link href="css/pav.css" rel="stylesheet" />
+                <link href="css/typo.css" rel="stylesheet" />
+                <link href="css/pavtestimonial.css" rel="stylesheet" />
+                <link href="css/pavblog.css" rel="stylesheet" />
+                <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+                <script type="text/javascript" src="js/bootstrap.min.js"></script>
+                <script type="text/javascript" src="js/raphael-min.js"></script>
+                <script src="js/angular.min.js"></script>
+                <script src="js/app.js"></script>
+<!--
+                <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+                <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700" rel="stylesheet" type="text/css" />
+-->
+            </head>
+            <body class="common-home page-home layout-fullwidth" cz-shortcut-listen="true" ng-app="CabLink">
+                <div class="row-offcanvas row-offcanvas-left">
+                    <div id="page">
+                        <!-- header -->
+                        <div id="header">
+                            <div id="topbar" class="">
+                                <div class="container">
+                                    <div class="topbar">
+                                        <div class="row">
+                                            <div class="col-lg-8 col-md-6 col-sm-5 hidden-xs">
+                                                <ul class="links  pull-left">
+                                                    <li class="hidden-sm hidden-xs">
+                                                        <a href="http://demopavothemes.com/pav_floral/index.php?route=account/wishlist" id="wishlist-total">
+                                                            <span class="fa fa-heart"></span>Wish List (0)
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://demopavothemes.com/pav_floral/index.php?route=account/account">
+                                                            <span class="fa fa-user"></span>My Account
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://demopavothemes.com/pav_floral/index.php?route=checkout/cart">
+                                                            <span class="fa fa-shopping-cart"></span>Shopping Cart
+                                                        </a>
+                                                    </li>
+                                                    <li class="hidden-sm hidden-xs">
+                                                        <a class="last" href="http://demopavothemes.com/pav_floral/index.php?route=checkout/checkout">
+                                                            <span class="fa fa-file"></span>Checkout
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="login pull-right hidden-sm hidden-md">
+                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=account/register">Register</a>
+                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=account/login">Login</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-7 col-xs-12">
+                                                <div class="pull-right">
+                                                    <div id="search">
+                                                        <button class="button-search pull-right" type="button">
+                                                            <span class="fa fa-search"></span>
+                                                        </button>
+                                                        <input type="text" name="search" placeholder="Search" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="currency-box pull-right hidden-xs">
+                                                        <form action="http://demopavothemes.com/pav_floral/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" class="frm-currency">
+                                                            <input type="hidden" name="code" value="">
+                                                                <input type="hidden" name="redirect" value="http://demopavothemes.com/pav_floral/index.php?route=common/home">
+                                                                </form>
+                                                            </div>
+                                                            <div class="language-box pull-right hidden-xs">
+                                                                <form action="http://demopavothemes.com/pav_floral/index.php?route=common/language/language" method="post" enctype="multipart/form-data" class="frm-language">
+                                                                    <input type="hidden" name="code" value="">
+                                                                        <input type="hidden" name="redirect" value="http://demopavothemes.com/pav_floral/index.php?route=common/home">
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="header-main">
+                                                    <div class="container">
+                                                        <div class="header-wrap">
+                                                            <div class="pull-left wrap-logo">
+                                                                <div id="logo-theme" class="logo-store">
+                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=common/home">
+                                                                        <span>Floral Store</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="pull-left wrap-menu">
+                                                                <section id="pav-mainnav">
+                                                                    <div class="navbar-inverse">
+                                                                        <div class="pav-megamenu hidden-sm hidden-xs">
+                                                                            <div class="navbar navbar-default">
+                                                                                <div id="mainmenutop" class="megamenu" role="navigation">
+                                                                                    <div class="navbar-header">
+                                                                                        <a href="javascript:;" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">
+                                                                                            <span class="icon-bar"></span>
+                                                                                            <span class="icon-bar"></span>
+                                                                                            <span class="icon-bar"></span>
+                                                                                        </a>
+                                                                                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                                                                            <ul class="nav navbar-nav megamenu">
+                                                                                                <li class="home">
+                                                                                                    <a href="javascript:void(0)">
+                                                                                                        <span class="menu-title">Home</span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li class="parent dropdown  aligned-left">
+                                                                                                    <a href="javascript:void(0)">
+                                                                                                        <span class="menu-title">Products</span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li class="parent dropdown  aligned-left">
+                                                                                                    <a href="javascript:void(0)">
+                                                                                                        <span class="menu-title">Offers</span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li class="parent dropdown  aligned-left">
+                                                                                                    <a href="javascript:void(0)">
+                                                                                                        <span class="menu-title">About Us</span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li class="parent dropdown  aligned-left">
+                                                                                                    <a href="javascript:void(0)">
+                                                                                                        <span class="menu-title">Contact Us</span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /header -->
+                                            <div class="slideshow hidden-xs hidden-sm" id="pavo-slideshow">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-lg-9 col-md-9  ">
+                                                            <div class="layerslider-wrapper carousel slide pavcontentslider" style="max-width:873px;">
+                                                                <div class="fix-margin-right" style="padding: 0;margin: 0;">
+                                                                    <div id="iview" class="hidden-xs" style="width:100%;height:380px; ">
+                                                                        <div class="iviewSlider" style="position: relative; transform-origin: 0px 0px 0px; transform: scale(1); background: url(images/banner-img.jpg) no-repeat;">
+                                                                            <div data-iview-transition="slice-top-fade,slice-right-fade" style="width: 865px; height: 380px;">
+                                                                                <div class="iview-caption tp-caption big-caption pink" data-start="800" data-x="50" data-y="85" data-width="600" data-transition="fade" style="opacity: 1; top: 85px; left: 50px; width: 600px; height: 45px;">
+                                                                                    <div class="caption-contain" style="opacity: 1; position: relative; width: 600px; height: 45px; top: 0px; left: 0px;">
+											Amazing pink tulip									</div>
+                                                                                </div>
+                                                                                <div class="iview-caption tp-caption detail" data-start="1200" data-x="50" data-y="238" data-width="600" data-transition="fade" style="opacity: 1; top: 238px; left: 50px; width: 600px; height: 34px;">
+                                                                                    <div class="caption-contain" style="opacity: 1; position: relative; width: 600px; height: 34px; top: 0px; left: 0px;">
+                                                                                        <a href="#" class="button">Detail
+                                                                                            <i class="fa fa-long-arrow-right"></i>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="iview-caption tp-caption desc" data-start="1200" data-x="50" data-y="130" data-width="600" data-transition="fade" style="opacity: 1; top: 130px; left: 50px; width: 600px; height: 66px;">
+                                                                                    <div class="caption-contain" style="opacity: 1; position: relative; width: 600px; height: 66px; top: 0px; left: 0px;">
+											Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagis sem nibh id elit. Duis sed odio									</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                        </div>
+                                                                        <div class="iview-controlNav" style="opacity: 0.6;">
+                                                                            <div class="iview-items">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a class="iview-control active" rel="0">1</a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="iview-control" rel="1">2</a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="iview-control" rel="2">3</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="iview-tooltip">
+                                                                            <div class="holder">
+                                                                                <div class="container">
+                                                                                    <div rel="0">
+                                                                                        <img src="images/img1.jpg">
+                                                                                        </div>
+                                                                                        <div rel="1">
+                                                                                            <img src="http://demopavothemes.com/pav_floral/image/catalog/demo/slider/layer-slider-2.jpg">
+                                                                                            </div>
+                                                                                            <div rel="2">
+                                                                                                <img src="http://demopavothemes.com/pav_floral/image/catalog/demo/slider/layer-slider-3.jpg">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 col-md-3  ">
+                                                                        <div class="nopadding">
+                                                                            <div class="box-content">
+                                                                                <div class="clearfix ">
+                                                                                    <div class="box pts-container ">
+                                                                                        <div class="pts-inner">
+                                                                                            <div class="row row-level-1">
+                                                                                                <div class="row-inner  clearfix">
+                                                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                                                        <div class="col-inner">
+                                                                                                            <div class="banner-wrapper">
+                                                                                                                <a href="#">
+                                                                                                                    <img src="image/adv2.jpg" alt="" class="img-responsive">
+                                                                                                                    </a>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="box pts-container ">
+                                                                                            <div class="pts-inner">
+                                                                                                <div class="row row-level-1">
+                                                                                                    <div class="row-inner  clearfix">
+                                                                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                                                            <div class="col-inner">
+                                                                                                                <div class="banner-wrapper">
+                                                                                                                    <a href="#">
+                                                                                                                        <img src="image/adv3.jpg" alt="" class="img-responsive">
+                                                                                                                        </a>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="showcase " id="pavo-showcase">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6" ng-include src="'pages/special2.html'"></div>
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6" ng-include src="'pages/most_viewed.html'"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div id="sidebar-main" class="col-md-12">
+                                                                            <div id="content">
+                                                                                <div class="nopadding">
+                                                                                    <div class="box-content">
+                                                                                        <div class="clearfix ">
+                                                                                            <div class="box pts-container ">
+                                                                                                <div class="pts-inner">
+                                                                                                    <div class="row row-level-1">
+                                                                                                        <div class="row-inner  clearfix">
+                                                                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                                                                <div class="col-inner">
+                                                                                                                    <div class="banner-wrapper">
+                                                                                                                        <a href="#">
+                                                                                                                            <img src="image/adv.jpg" alt="" class="img-responsive">
+                                                                                                                            </a>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="box-product yellow horizontal box productcarousel" id="module997283564" ng-include src="'pages/latest.html'"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mass-bottom " id="pavo-mass-bottom">
+                                                                        <div class="container">
+                                                                            <div class="row">
+                                                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                                                                                    <div id="pavtestimonial1905243001" class="carousel slide pavtestimonial">
+                                                                                        <div class="carousel-inner">
+                                                                                            <div class="item active">
+                                                                                                <div class="testimonial-item">
+                                                                                                    <div class="testimonial">
+                                                                                                        <span class="fa fa-quote-left icon"></span>
+                                                                                                        <div>
+                                                                                                            <p>Duis sed odio sit amet nibh vulputa cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="t-avatar">
+                                                                                                        <img alt="Jhone
+Sup..." src="image/testimonial1-108x108.jpg" class="img-circle">
+                                                                                                        </div>
+                                                                                                        <div class="profile">
+                                                                                                            <div>
+                                                                                                                <h3>Jhone</h3>
+                                                                                                                <p>Suppor Manager</p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="item">
+                                                                                                    <div class="testimonial-item">
+                                                                                                        <div class="testimonial">
+                                                                                                            <span class="fa fa-quote-left icon"></span>
+                                                                                                            <div>
+                                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="t-avatar">
+                                                                                                            <img alt="Pitter
+Su..." src="image/testimonial2-108x108.jpg" class="img-circle">
+                                                                                                            </div>
+                                                                                                            <div class="profile">
+                                                                                                                <div>
+                                                                                                                    <h3>Pitter</h3>
+                                                                                                                    <p>Suppor Manager</p>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <a class="carousel-control left" href="#pavtestimonial1905243001" data-slide="prev">‹</a>
+                                                                                                <a class="carousel-control right" href="#pavtestimonial1905243001" data-slide="next">›</a>
+                                                                                            </div>
+                                                                                            
+                                                                                        </div>
+                                                                                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12 ">
+                                                                                            <div class="box pav-block bloglatest">
+                                                                                                <div class="box-heading">
+                                                                                                    <span>Latest Blog</span>
+                                                                                                </div>
+                                                                                                <div class="pavblog-latest clearfix box-content">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                                                            <div class="blog-item">
+                                                                                                                <div class="blog-body clearfix">
+                                                                                                                    <div class="image clearfix">
+                                                                                                                        <img src="image/blog_3-300x160.jpg" title="Donec tellus Nulla lorem Nullam elit id ut" alt="Donec tellus Nulla lorem Nullam elit id ut" class="img-responsive">
+                                                                                                                        </div>
+                                                                                                                        <div class="group-blog">
+                                                                                                                            <div class="blog-title">
+                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=pavblog/blog&amp;id=11" title="Donec tellus Nulla lorem Nullam elit id ut">Donec tellus Nulla lorem Nullam elit id ut</a>
+                                                                                                                            </div>
+                                                                                                                            <div class="description">									Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue ...								</div>
+                                                                                                                            <p class="created">
+                                                                                                                                <span>2013-03-11</span>
+                                                                                                                            </p>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                                                                <div class="blog-item">
+                                                                                                                    <div class="blog-body clearfix">
+                                                                                                                        <div class="image clearfix">
+                                                                                                                            <img src="image/blog_2-300x160.jpg" title="Neque porro quisquam est, qui dolorem ipsum" alt="Neque porro quisquam est, qui dolorem ipsum" class="img-responsive">
+                                                                                                                            </div>
+                                                                                                                            <div class="group-blog">
+                                                                                                                                <div class="blog-title">
+                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=pavblog/blog&amp;id=10" title="Neque porro quisquam est, qui dolorem ipsum">Neque porro quisquam est, qui dolorem ipsum</a>
+                                                                                                                                </div>
+                                                                                                                                <div class="description">									"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa...								</div>
+                                                                                                                                <p class="created">
+                                                                                                                                    <span>2013-03-09</span>
+                                                                                                                                </p>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                                                                    <div class="blog-item">
+                                                                                                                        <div class="blog-body clearfix">
+                                                                                                                            <div class="image clearfix">
+                                                                                                                                <img src="image/blog_3-300x160.jpg" title="Commodo laoreet semper tincidunt lorem " alt="Commodo laoreet semper tincidunt lorem " class="img-responsive">
+                                                                                                                                </div>
+                                                                                                                                <div class="group-blog">
+                                                                                                                                    <div class="blog-title">
+                                                                                                                                        <a href="http://demopavothemes.com/pav_floral/index.php?route=pavblog/blog&amp;id=9" title="Commodo laoreet semper tincidunt lorem ">Commodo laoreet semper tincidunt lorem </a>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="description">									Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur...								</div>
+                                                                                                                                    <p class="created">
+                                                                                                                                        <span>2013-03-09</span>
+                                                                                                                                    </p>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class="clearfix"></div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <footer id="footer">
+                                                                                            <div class="footer-top">
+                                                                                                <div class="container">
+                                                                                                    <div class="wrap-fcenter">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-lg-12 col-md-12">
+                                                                                                                <div class="box cusblock">
+                                                                                                                    <div class="box-module-pavreassurances  box-content">
+                                                                                                                        <div class="row quickaccess">
+                                                                                                                            <div class="col-lg-3 col-md-3">
+                                                                                                                                <i class="icon-name fa fa-tags"></i>
+                                                                                                                                <h3>Best prices</h3>
+                                                                                                                                <p>Lorem quis bibendum auctor</p>
+                                                                                                                                <div class="mask" style="display:none;">
+                                                                                                                                    <p>
+                                                                                                                                        <br>
+                                                                                                                                        </p>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                                <!-- Modal -->
+                                                                                                                                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-hidden="true">
+                                                                                                                                    <div class="modal-dialog">
+                                                                                                                                        <div class="modal-content">
+                                                                                                                                            <div class="modal-header">
+                                                                                                                                                <button type="button" class="close" data-dismiss="modal">
+                                                                                                                                                    <span aria-hidden="true">×</span>
+                                                                                                                                                    <span class="sr-only">Close</span>
+                                                                                                                                                </button>
+                                                                                                                                                <span class="icon-name fa fa-tags"></span>
+                                                                                                                                                <h4>Best prices</h4>
+                                                                                                                                                <p>Lorem quis bibendum auctor</p>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="modal-body">
+                                                                                                                                                <p>
+                                                                                                                                                    <br>
+                                                                                                                                                    </p>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="modal-footer">
+                                                                                                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="col-lg-3 col-md-3">
+                                                                                                                                        <i class="icon-name fa fa-gift"></i>
+                                                                                                                                        <h3>Free gift</h3>
+                                                                                                                                        <p>Bibendum auctor nisi elit ceuat</p>
+                                                                                                                                        <div class="mask" style="display:none;">
+                                                                                                                                            <p>
+                                                                                                                                                <br>
+                                                                                                                                                </p>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                        <!-- Modal -->
+                                                                                                                                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                                                                                                                                            <div class="modal-dialog">
+                                                                                                                                                <div class="modal-content">
+                                                                                                                                                    <div class="modal-header">
+                                                                                                                                                        <button type="button" class="close" data-dismiss="modal">
+                                                                                                                                                            <span aria-hidden="true">×</span>
+                                                                                                                                                            <span class="sr-only">Close</span>
+                                                                                                                                                        </button>
+                                                                                                                                                        <span class="icon-name fa fa-gift"></span>
+                                                                                                                                                        <h4>Free gift</h4>
+                                                                                                                                                        <p>Bibendum auctor nisi elit ceuat</p>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="modal-body">
+                                                                                                                                                        <p>
+                                                                                                                                                            <br>
+                                                                                                                                                            </p>
+                                                                                                                                                        </div>
+                                                                                                                                                        <div class="modal-footer">
+                                                                                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="col-lg-3 col-md-3">
+                                                                                                                                                <i class="icon-name fa fa-lock"></i>
+                                                                                                                                                <h3>Secure payment</h3>
+                                                                                                                                                <p>Misi elit consequat ipsum</p>
+                                                                                                                                                <div class="mask" style="display:none;">
+                                                                                                                                                    <p>
+                                                                                                                                                        <br>
+                                                                                                                                                        </p>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                                <!-- Modal -->
+                                                                                                                                                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-hidden="true">
+                                                                                                                                                    <div class="modal-dialog">
+                                                                                                                                                        <div class="modal-content">
+                                                                                                                                                            <div class="modal-header">
+                                                                                                                                                                <button type="button" class="close" data-dismiss="modal">
+                                                                                                                                                                    <span aria-hidden="true">×</span>
+                                                                                                                                                                    <span class="sr-only">Close</span>
+                                                                                                                                                                </button>
+                                                                                                                                                                <span class="icon-name fa fa-lock"></span>
+                                                                                                                                                                <h4>Secure payment</h4>
+                                                                                                                                                                <p>Misi elit consequat ipsum</p>
+                                                                                                                                                            </div>
+                                                                                                                                                            <div class="modal-body">
+                                                                                                                                                                <p>
+                                                                                                                                                                    <br>
+                                                                                                                                                                    </p>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="modal-footer">
+                                                                                                                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                                                                                                                </div>
+                                                                                                                                                            </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="col-lg-3 col-md-3">
+                                                                                                                                                        <i class="icon-name fa fa-calendar"></i>
+                                                                                                                                                        <h3>Support 24/7</h3>
+                                                                                                                                                        <p>Consequat ipsum nec sagis sem</p>
+                                                                                                                                                        <div class="mask" style="display:none;">
+                                                                                                                                                            <p>
+                                                                                                                                                                <br>
+                                                                                                                                                                </p>
+                                                                                                                                                            </div>
+                                                                                                                                                        </div>
+                                                                                                                                                        <!-- Modal -->
+                                                                                                                                                        <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-hidden="true">
+                                                                                                                                                            <div class="modal-dialog">
+                                                                                                                                                                <div class="modal-content">
+                                                                                                                                                                    <div class="modal-header">
+                                                                                                                                                                        <button type="button" class="close" data-dismiss="modal">
+                                                                                                                                                                            <span aria-hidden="true">×</span>
+                                                                                                                                                                            <span class="sr-only">Close</span>
+                                                                                                                                                                        </button>
+                                                                                                                                                                        <span class="icon-name fa fa-calendar"></span>
+                                                                                                                                                                        <h4>Support 24/7</h4>
+                                                                                                                                                                        <p>Consequat ipsum nec sagis sem</p>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <div class="modal-body">
+                                                                                                                                                                        <p>
+                                                                                                                                                                            <br>
+                                                                                                                                                                            </p>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        <div class="modal-footer">
+                                                                                                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div>
+                                                                                                                                                            </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                            <div class="footer-center " id="pavo-footer-center">
+                                                                                                                                <div class="container">
+                                                                                                                                    <div class="wrap-fcenter">
+                                                                                                                                        <div class="row">
+                                                                                                                                            <div class="column col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                                                                                                                                <div class="box contact-us">
+                                                                                                                                                    <div class="box-heading">
+                                                                                                                                                        <span>Contact Us</span>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="box-content">
+                                                                                                                                                        <p>We have 152 guests and 14 members online</p>
+                                                                                                                                                        <p>Phone: +01 888 (000) 1234</p>
+                                                                                                                                                        <p>Email: www.floral.com</p>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="column col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                                                                                                                                <div class="box pavtwitter">
+                                                                                                                                                    <div class="box-heading">
+                                                                                                                                                        <span>my_twitter</span>
+                                                                                                                                                    </div>
+                                                                                                                                                    
+                                                                                                                                                </div>
+
+                                                                                                                                            </div>
+                                                                                                                                            <div class="column col-xs-12 col-sm-6 col-md-2 col-lg-2">
+                                                                                                                                                <div class="box">
+                                                                                                                                                    <div class="box-heading">
+                                                                                                                                                        <span>Customer Service</span>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="box-content">
+                                                                                                                                                        <ul class="list">
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=information/contact">Contact Us</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=account/return/add">Returns</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=information/sitemap">Site Map</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=product/manufacturer">Brands</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=account/voucher">Gift Vouchers</a>
+                                                                                                                                                            </li>
+                                                                                                                                                        </ul>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="column col-xs-12 col-sm-6 col-md-2 col-lg-2">
+                                                                                                                                                <div class="box">
+                                                                                                                                                    <div class="box-heading">
+                                                                                                                                                        <span>Extras</span>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="box-content">
+                                                                                                                                                        <ul class="list">
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=product/manufacturer">Brands</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=account/voucher">Gift Vouchers</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=affiliate/account">Affiliates</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=product/special">Specials</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=account/return/add">Returns</a>
+                                                                                                                                                            </li>
+                                                                                                                                                        </ul>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="column col-xs-12 col-sm-6 col-md-2 col-lg-2">
+                                                                                                                                                <div class="box">
+                                                                                                                                                    <div class="box-heading">
+                                                                                                                                                        <span>My Account</span>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="box-content">
+                                                                                                                                                        <ul class="list">
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=account/account">My Account</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=account/order">Order History</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=account/wishlist">Wish List</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=account/newsletter">Newsletter</a>
+                                                                                                                                                            </li>
+                                                                                                                                                            <li>
+                                                                                                                                                                <a href="http://demopavothemes.com/pav_floral/index.php?route=product/special">Specials</a>
+                                                                                                                                                            </li>
+                                                                                                                                                        </ul>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                            <div id="powered">
+                                                                                                                                <div class="container">
+                                                                                                                                    <div class="powered">
+                                                                                                                                        <div class="copyright pull-left">
+                  Powered By 
+                                                                                                                                            <a href="http://www.opencart.com">OpenCart</a>
+                                                                                                                                            <br> Floral Store © 2015. 
+                Design By 
+                                                                                                                                                <a href="http://www.pavothemes.com" title="pavothemes - opencart themes clubs">PavoThemes</a>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </footer>
+                                                                                                                            <script type="text/javascript">
+$(document).ready( function (){
+	$(".paneltool .panelbutton").click( function(){	
+		$(this).parent().toggleClass("active");
+	} );
+} );
+
+</script>
+                                                                                                                            <script type="text/javascript">
+$('#myTab a').click(function (e) {
+	e.preventDefault();
+	$(this).tab('show');
+})
+$('#myTab a:first').tab('show'); 
+ 
+
+var $MAINCONTAINER = $("html");
+
+/**
+ * BACKGROUND-IMAGE SELECTION
+ */
+$(".background-images").each( function(){
+	var $parent = this;
+	var $input  = $(".input-setting", $parent ); 
+	$(".bi-wrapper > div",this).click( function(){
+		 $input.val( $(this).data('val') ); 
+		 $('.bi-wrapper > div', $parent).removeClass('active');
+		 $(this).addClass('active');
+
+		 if( $input.data('selector') ){  
+			$($input.data('selector'), $($MAINCONTAINER) ).css( $input.data('attrs'),'url('+ $(this).data('image') +')' );
+		 }
+	} );
+} ); 
+
+$(".clear-bg").click( function(){
+	var $parent = $(this).parent();
+	var $input  = $(".input-setting", $parent ); 
+	if( $input.val('') ) {
+		if( $parent.hasClass("background-images") ) {
+			$('.bi-wrapper > div',$parent).removeClass('active');	
+			$($input.data('selector'),$("#main-preview iframe").contents()).css( $input.data('attrs'),'none' );
+		}else {
+			$input.attr( 'style','' )	
+		}
+		$($input.data('selector'), $($MAINCONTAINER) ).css( $input.data('attrs'),'inherit' );
+
+	}	
+	$input.val('');
+
+	return false;
+} );
+
+
+
+ $('.accordion-group input.input-setting').each( function(){
+ 	 var input = this;
+ 	 $(input).attr('readonly','readonly');
+ 	 $(input).ColorPicker({
+ 	 	onChange:function (hsb, hex, rgb) {
+ 	 		$(input).css('backgroundColor', '#' + hex);
+ 	 		$(input).val( hex );
+ 	 		if( $(input).data('selector') ){  
+				$( $MAINCONTAINER ).find($(input).data('selector')).css( $(input).data('attrs'),"#"+$(input).val() )
+			}
+ 	 	}
+ 	 });
+	} );
+ $('.accordion-group select.input-setting').change( function(){
+	var input = this; 
+		if( $(input).data('selector') ){  
+		var ex = $(input).data('attrs')=='font-size'?'px':"";
+		$( $MAINCONTAINER ).find($(input).data('selector')).css( $(input).data('attrs'), $(input).val() + ex);
+	}
+ } );
+ 
+
+</script>
+                                                                                                                        </div>
+                                                                                                                        <div class="sidebar-offcanvas  visible-xs visible-sm">
+                                                                                                                            <div class="offcanvas-inner panel-offcanvas">
+                                                                                                                                <div class="offcanvas-heading panel-heading">
+                                                                                                                                    <button type="button" class="button" data-toggle="offcanvas">
+                                                                                                                                        <span class="fa fa-times"></span>
+                                                                                                                                    </button>
+                                                                                                                                </div>
+                                                                                                                                <div class="offcanvas-body panel-body">
+                                                                                                                                    <div class="box category highlights">
+                                                                                                                                        <div class="box-heading">
+                                                                                                                                            <span>Categories</span>
+                                                                                                                                        </div>
+                                                                                                                                        <div class="box-content">
+                                                                                                                                            <ul class="box-category">
+                                                                                                                                                <li class="haschild">
+                                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=product/category&amp;path=17">
+                                                                                                                                                        <i class="fa fa-asterisk"></i>Outerwear (10)
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                                                                                <li class="haschild">
+                                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=product/category&amp;path=34">
+                                                                                                                                                        <i class="fa fa-asterisk"></i>Dresses (12)
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                                                                                <li class="haschild">
+                                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=product/category&amp;path=18">
+                                                                                                                                                        <i class="fa fa-asterisk"></i>Categories (7)
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                                                                                <li class="haschild">
+                                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=product/category&amp;path=24">
+                                                                                                                                                        <i class="fa fa-asterisk"></i>New (2)
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                                                                                <li class="haschild">
+                                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=product/category&amp;path=33">
+                                                                                                                                                        <i class="fa fa-asterisk"></i>Accessories (9)
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                                                                                <li class="haschild">
+                                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=product/category&amp;path=26">
+                                                                                                                                                        <i class="fa fa-asterisk"></i>Tops (9)
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                                                                                <li class="haschild">
+                                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=product/category&amp;path=20">
+                                                                                                                                                        <i class="fa fa-asterisk"></i>Bottoms (13)
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                                                                                <li class="haschild">
+                                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=product/category&amp;path=25">
+                                                                                                                                                        <i class="fa fa-asterisk"></i>Bags (9)
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                                                                                <li class="haschild">
+                                                                                                                                                    <a href="http://demopavothemes.com/pav_floral/index.php?route=product/category&amp;path=57">
+                                                                                                                                                        <i class="fa fa-asterisk"></i>Shoes (8)
+                                                                                                                                                    </a>
+                                                                                                                                                </li>
+                                                                                                                                            </ul>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                    <script type="text/javascript">
+    $(document).ready(function(){
+        var active = $('.collapse.in').attr('id');
+        $('span[data-target=#'+active+']').html("-");
+
+        $('.collapse').on('show.bs.collapse', function () {
+            $('span[data-target=#'+$(this).attr('id')+']').html("-");
+        });
+        $('.collapse').on('hide.bs.collapse', function () {
+            $('span[data-target=#'+$(this).attr('id')+']').html("+");
+        });
+    });
+</script>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                
+                                                                                                                </body>
+                                                                                                            </html>

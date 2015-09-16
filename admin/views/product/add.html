@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">                            
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-themesecondary">
+                        <i class="widget-icon fa fa-tags themesecondary"></i>
+                        <span class="widget-caption themesecondary">Add Item</span>
+                        <span class="widget-caption themesecondary pull-right" style="margin-right: 25px">
+                            <a href="#/items">Back</a>
+                        </span>
+                    </div><!--Widget Header-->
+                    <div class="widget-body  no-padding">
+                        <div class="tickets-container">
+                            <form class="form-horizontal" role="form" ng-submit="saveProduct()" ng-controller="addItemController">
+                                <div class="col-lg-12">
+                                    <div class="well well-sm">
+                                        <strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail" class="control-label col-xs-2">Category:</label>
+                                        <div class="col-xs-10" ng-controller="CategoryListController">
+                                            <select id="company" class="form-control" ng-model="formData.category_id" required>
+                                                    <option value=""> -- Select --</option>
+                                                    <option ng-repeat="category in categories" value="{{ category.category_id }}">
+                                                        {{ category.title }}
+                                                    </option>
+                                                </select> 
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword" class="control-label col-xs-2">Name:</label>
+                                        <div class="col-xs-10">
+                                            <input type="text" class="form-control" 
+                                                       name="title" ng-model="formData.title" placeholder="Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword" class="control-label col-xs-2">Price:</label>
+                                        <div class="col-xs-10">
+                                            <input type="text" class="form-control" 
+                                                       name="title" ng-model="formData.price" placeholder="Name" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="InputMessage" class="control-label col-xs-2">Enter Description:</label>
+                                        <div class="col-xs-10">
+                                            <textarea name="InputMessage" id="InputMessage" 
+                                                      class="form-control" ng-model="formData.desc" rows="5" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-offset-2 col-xs-12">
+                                            <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

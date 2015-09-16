@@ -1,0 +1,63 @@
+
+<div class="row">
+<div class="col-lg-12 col-sm-12 col-xs-12">
+                            
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="widget">
+                                        <div class="widget-header bordered-bottom bordered-themesecondary">
+                                            <i class="widget-icon fa fa-tags themesecondary"></i>
+                                            <span class="widget-caption themesecondary">Items</span>
+                                            <span custom-button></span>
+                                        </div><!--Widget Header-->
+                                        <div class="widget-body  no-padding">
+                                            <div class="tickets-container" ng-controller="ItemListController">
+                                                <ul class="tickets-list">
+                                                    <li class="ticket-item" ng-repeat="item in items">
+                                                        <div class="row" >
+                                                            <div class="ticket-user col-lg-4 col-sm-12">
+                                                                <img ng-src="images/cat1.jpg" class="user-avatar">
+                                                                <span class="user-name">{{ item.title }}</span>
+<!--
+                                                                <span class="user-name">Adam Johnson</span>
+                                                                <span class="user-at">at</span>
+                                                                <span class="user-company">Microsoft</span>
+-->
+                                                            </div>
+                                                            <div class="ticket-time  col-lg-2 col-sm-6 col-xs-12">
+                                                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                                                <i class="fa fa-clock-o"></i>
+                                                                <span class="time">1 Hours Ago</span>
+                                                            </div>
+                                                            <div class="ticket-time  col-lg-2 col-sm-6 col-xs-12">
+                                                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                                                
+                                                                <span class="time">Rs. {{ item.original_price }}</span>
+                                                            </div>
+                                                            <div class="ticket-time  col-lg-2 col-sm-6 col-xs-12">
+                                                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                                                <a href="#" class="btn btn-info btn-xs edit"><i class="fa fa-edit"></i> Edit</a>
+                                                                <a class="btn btn-danger btn-xs delete" ng-click="openConfirmation1($event, item.product_id)">
+                                                                    <i class="fa fa-trash-o"></i> Delete
+                                                                </a>
+                                                            </div>
+                                                            
+                                                            <div class="ticket-state bg-palegreen">
+                                                                <i class="fa fa-check"></i>
+                                                            </div>
+                                                            <div class="ticket-state bg-darkorange">
+                                                                <i class="fa fa-check"></i>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </li>
+                                                   
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+    </div>

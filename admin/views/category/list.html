@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">                            
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-themesecondary">
+                        <i class="widget-icon fa fa-tags themesecondary"></i>
+                        <span class="widget-caption themesecondary">Categories</span>
+                        <span class="widget-caption themesecondary pull-right" style="margin-right: 25px">
+                            <a href="#/addcategory">Add Category</a>
+                        </span>
+                    </div><!--Widget Header-->
+                    <div class="widget-body  no-padding">
+                        <div class="tickets-container">
+                            <ul class="tickets-list">
+                                <li class="ticket-item" ng-repeat="item in categories">
+                                    <div class="row" >
+                                        <div class="ticket-user col-lg-6 col-sm-12">
+                                            <span class="user-name">{{ item.title }}</span>
+                                        </div>
+                                        <div class="ticket-time  col-lg-3 col-sm-6 col-xs-12">
+                                            <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                            <i class="fa fa-clock-o"></i>
+                                            <span class="time">1 Hours Ago</span>
+                                        </div>
+                                        <div class="ticket-time  col-lg-3 col-sm-6 col-xs-12">
+                                            <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                            <a href="#/edit-category/{{ item.category_id }}" class="btn btn-info btn-xs edit">
+                                                <i class="fa fa-edit"></i> 
+                                                Edit</a>
+                                            <a class="btn btn-danger btn-xs delete" ng-click="openConfirmation($event, item.category_id)">
+                                                <i class="fa fa-trash-o"></i> Delete
+                                            </a>
+                                        </div>
+                                        <div class="ticket-state" 
+                                             ng-class="{'bg-palegreen': item.status == 1, 'bg-darkorange': item.status == 0}">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="ticket-item" ng-show="categories.length == 0">
+                                    <div class="row" >
+                                        <div class="ticket-user col-lg-12 col-sm-12" style="height:56px">
+                                            
+                                            <div class="alert alert-danger" role="alert">Categories not found !</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
