@@ -38,6 +38,7 @@ Route::group(['prefix' => 'products'], function() {
     Route::get('/', 'ProductController@index');
     Route::get('new', 'ProductController@create');
     Route::post('new', 'ProductController@store');
+    Route::get('{id}', 'ProductController@show');
 });
 Route::group(['prefix' => 'categories'], function() {
     Route::get('/', 'CategoryController@index');

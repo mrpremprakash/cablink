@@ -16,10 +16,13 @@
         }).when('/categories', {
             templateUrl: 'views/category/list.html',
             controller: 'CategoryListController'
-        })
-        .when('/edit-category/:id', {
+        }).when('/edit-category/:id', {
             templateUrl: 'views/category/add.html',
             controller: 'CategoryEditController'
+        }).when('/promo-item', {
+            templateUrl: 'views/promo/list.html',
+            controller: 'PromoController',
+            controllerAs: 'PRCtrl'
         });
     });
 }());

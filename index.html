@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="cablink">
 	<head>
 		<meta charset="utf-8">
 		<!-- Title here -->
-		<title>MacKart</title>
+		<title>Cablink Kart</title>
 		<!-- Description, Keywords and Author -->
 		<meta name="description" content="Your description">
 		<meta name="keywords" content="Your,Keywords">
@@ -20,7 +20,8 @@
 		<link href="resources/css/style.css" rel="stylesheet">
 		<!-- Stylesheet for Color -->
 		<link href="resources/css/red.css" rel="stylesheet">
-		
+		<link href="resources/css/sidebar-nav.css" rel="stylesheet">
+
 		<!-- Favicon -->
 		
 	</head>
@@ -47,7 +48,7 @@
 					<div class="col-md-4">
 						<!-- Logo. Use class "color" to add color to the text. -->
 						<div class="logo">
-							<h1><a href="#">Mac<span class="color bold">Kart</span></a></h1>
+							<h1><a href="#">Cablink<span class="color bold">Kart</span></a></h1>
 							<p class="meta">online shopping is fun!!!</p>
 						</div>
 					</div>
@@ -115,7 +116,7 @@
 		<!--/ Newsletter ends -->
 
 		<!-- Footer starts -->
-		
+        <footer ng-include="'views/footer.html'"></footer>
 		<!--/ Footer ends -->
 
 		
@@ -126,6 +127,10 @@
 		
 		<script src="resources/js/angular.min.js"></script>
 		<script src="resources/js/angular-route.min.js"></script>
-        
+		<script src="js/app.js"></script>
+		<script src="services/HomeProductService.js"></script>
+		<script src="controllers/home_product_ctrl.js"></script>
+		<script src="controllers/product_detail_ctrl.js"></script>
+
 	</body>	
 </html>

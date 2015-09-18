@@ -1,6 +1,4 @@
 (function() {
-    
-    
     angular.module('cablink').controller('ModalInstanceCtrl2', function ($scope, $modalInstance, $http, data, itemService) {
         $scope.ok = function () {
             $modalInstance.close(); 

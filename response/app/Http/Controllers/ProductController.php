@@ -16,7 +16,7 @@ class ProductController extends Controller {
      * @return Response
      */
     public function index() {
-        $categories = Product::select('product_id', 'category_id', 'title', 'description', 'original_price', 'is_available', 'star')
+        $categories = Product::select('product_id', 'category_id', 'title', 'description', 'original_price', 'is_available', 'star', 'img', 'is_promo')
                     ->get()->keyBy('product_id');
                 return response()->json($categories);
         //return view('pages.products.product-list');
@@ -43,6 +43,7 @@ class ProductController extends Controller {
         $productObj->description = Request::input('desc');
         $productObj->original_price = Request::input('price');
         $productObj->is_available = 1;
+        $productObj->img = Request::input('img');
         $status = $productObj->save();
         return response()->json(
                     array('status' => $status, 'product_id' => $productObj->product_id)
@@ -56,7 +57,8 @@ class ProductController extends Controller {
      * @return Response
      */
     public function show($id) {
-        //
+        $product = Product::select('*')->where('product_id', '=', $id)->first();
+        return response()->json($product);
     }
 
     /**
