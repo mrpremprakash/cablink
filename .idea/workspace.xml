@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edb731c6-a294-40a7-a70a-0fb502f9ac9e" name="Default" comment="">
+    <list default="true" id="edb731c6-a294-40a7-a70a-0fb502f9ac9e" name="Default" comment="fixed fix_imafge_width #1&#10;sdfsdf">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/product_detail.html" afterPath="$PROJECT_DIR$/views/product_detail.html" />
     </list>
@@ -51,8 +51,8 @@
       <file leaf-file-name="product_detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/product_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8491921">
-              <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.7881508">
+              <caret line="118" column="42" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -313,7 +313,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453798493895</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed fix_imafge_width #1&#10;sdfsdf">
+      <created>1453798562446</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1453798562446</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -381,7 +387,8 @@
     <MESSAGE value="This has been committed" />
     <MESSAGE value="Laravel 5 integrated" />
     <MESSAGE value="fix_image_width #1&#10;sdfsdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix_image_width #1&#10;sdfsdf" />
+    <MESSAGE value="fixed fix_imafge_width #1&#10;sdfsdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed fix_imafge_width #1&#10;sdfsdf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -734,8 +741,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/product_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8491921">
-          <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.7881508">
+          <caret line="118" column="42" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
